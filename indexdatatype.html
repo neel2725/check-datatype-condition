@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkdatatypecondition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body{
+            background-color: cornflowerblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #txt{
+            background-color: rgb(81, 90, 133);
+            border-radius: 15px;
+            padding: 12px 23px 9px 19px;
+            letter-spacing: 2px;
+            font-size: 15px;
+        }
+        button{
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 8px;
+            padding: 5px 15px 9px 12px;
+            letter-spacing: 2px;
+            color: blueviolet;
+            background-color: cadetblue;
+            font-size: 20px;
+            width: 200px;
+            height: 40px;
+            
+        }
+        .label{
+            margin-top: 10px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="enter a number or string" id="txt">
+    <button onclick="setdatatypename()" class="btn">plz click here</button>
+    <label for="timepass" id="lbl" class="label"></label>
+    <script>
+        function setdatatypename(){
+            let inpt=document.querySelector("#txt").value;
+            let nel=document.querySelector("#lbl");
+            let n=parseInt(inpt);
+            let jay=document.querySelector("#txt")
+
+            if(n===n){
+                nel.innerText="congratulations u have a number"
+                nel.style.color="green"
+                jay.value=""
+            }else{
+                nel.innerText="better luck next time"
+                nel.style.color="red"
+                jay.value=""
+            }
+        }
+    </script>
+</body>
+</html>
